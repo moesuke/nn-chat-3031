@@ -9,13 +9,13 @@ services:
       - .:/app
       - /app/node_modules
     depends_on:
-      - db
+      - dpg-cc7e9d9a6gdvc1qkjno0-a
   db:
     image: postgres:14.2
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: nn_chat
+      POSTGRES_USER: nn_chat_db_user
+      POSTGRES_PASSWORD: process.env.DB_PASS
+      POSTGRES_DB: nn_chat_db
       TZ: "Asia/Tokyo"
     volumes:
       - ../nn-chat-db:/var/lib/postgresql/data
