@@ -18,6 +18,7 @@ services:
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: nn_chat_db
+      POSTGRES_HOSTNAME: ${DATABASE_HOSTNAME}
       TZ: "Asia/Tokyo"
     volumes:
       - ../nn-chat-db:/var/lib/postgresql/data
