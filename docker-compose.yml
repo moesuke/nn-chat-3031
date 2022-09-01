@@ -12,12 +12,10 @@ services:
       - db
   db:
     image: postgres:14.2
-    ports:
-      - 5432:5432
     environment:
-      POSTGRES_USER: ${DATABASE_USER}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: nn_chat_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nn_chat
       TZ: "Asia/Tokyo"
     volumes:
       - ../nn-chat-db:/var/lib/postgresql/data
